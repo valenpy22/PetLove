@@ -1,21 +1,18 @@
-import { Text, View, StyleSheet, Pressable } from "react-native";
-import { Link, router } from "expo-router";
+import { Link } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const HomePage = () => {
-    return(
-        <View>
-            <Text>User Page</Text>
-            <Link href="/users/1">Go to user 1</Link>
-            <Pressable onPress={() => router.push("/users/2")}>
-              <Text>Go to user 2</Text>
-            </Pressable>
-        </View>
-    );
-};
-
-export default HomePage;
-
+export default function Page() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.main}>
+        <Text style={styles.title}>Hello World</Text>
+        <Text style={styles.subtitle}>This is the first page of your app.</Text>
+        <Link href="/login"><Text>Llevame al login</Text></Link>
+      </View>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
