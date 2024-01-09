@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
 
@@ -9,6 +10,7 @@ export default function Login () {
     // Lógica de inicio de sesión
     console.log('Login con:', username, password);
     // Aquí puedes integrar la lógica de autenticación, como una petición a un API
+    router.push('/adoption');
   };
 
   return (
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#FF7979',
+    backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -53,5 +55,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'gray',
     marginBottom: 10,
+    borderRadius: 20,
+    paddingLeft: 20
   },
 });
