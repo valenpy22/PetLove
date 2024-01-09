@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { View, StatusBar, Pressable, TextInput, Button, StyleSheet, Text } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
@@ -10,6 +11,7 @@ export default function Login () {
     // Lógica de inicio de sesión
     console.log('Login con:', username, password);
     // Aquí puedes integrar la lógica de autenticación, como una petición a un API
+    router.push('/adoption');
   };
 
   return (
